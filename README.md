@@ -6,7 +6,6 @@ Firstly, make sure you have Git and npm properly installed. Start by cloning thi
 Using Docker and mongoDB is a prerequisite, so it is assumed that the DB is installed, up and running. For example by running:
 
 - docker-compose build
-
 - docker-compose up -d (runs it in the background)
 
 When the DB is running and accessible, please enter "npm start" into Git Bash (or similar).
