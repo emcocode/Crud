@@ -1,0 +1,9 @@
+<% if (isLoggedIn) { %>
+  <h1>Dashboard:<br><%= username %></h1>
+    <div class="buttonGroup">
+      <input type="button" id="createSnippetButton" value="Create snippet" onclick="window.location.href='/createSnippet'">
+    </div>
+
+<% } else { %>
+  <h1>Dashboard:<br>Guest</h1>
+<% } %>

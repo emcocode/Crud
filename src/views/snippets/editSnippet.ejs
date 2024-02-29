@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit snippet!</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+      <h1>Edit snippet:<br><%= username %></h1>
+      <button onclick="window.location.href='/dashboard'" id="dashboardButton"></button><br>
+      <button onclick="window.location.href='/logout'" id="logoutButton"></button><br>
+      <form action="/editSnippet" method="POST">
+        <input type="hidden" name="snippetId" value="<%= snippetId %>">
+        <label><strong>Name of the snippet:</strong></label>
+        <%= snippetTitle %><br><br>
+        <textarea name="snippetContent" style="height: 500px; width: 500px; resize: none; font-size: 14px; padding: 8px;"><%= snippetContent %></textarea><br><br>
+        <div class="buttonGroup">
+          <input type="submit" id="editSnippetButton" value="Submit change">
+        </div>
+      </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<h1>Snippets List</h1>
+<% if (snippets && snippets.forEach) { %>
+  <ul>
+    <% snippets.forEach(function(snippet, index) { %>
+      <li>
+        <h2 class="snippet-title" style="cursor:pointer;" onclick="toggleSnippetContent('<%= index %>')">
+          <%= snippet.title %> 
+          <span class="snippet-creator">- creator: <%= snippet.creator %></span>
+        </h2>
+        <div id="content-<%= index %>" class="snippet-content" style="display:none;">
+            <div class="snippet-container">
+              <div class="code-container">
+                <pre><code><%- snippet.content %></code></pre>
+              </div>
+              <% if (snippet.creator === username) { %>
+                <div class="buttons-container">
+                  <button class="editButton" onclick="window.location.href='/editSnippet?id=<%= snippet._id %>'">Edit</button>
+                  <form action="/deleteSnippet" method="POST" onsubmit="return confirmDelete()">
+                    <input type="hidden" name="snippetId" value="<%= snippet._id %>">
+                    <button type="submit" class="deleteButton">Delete</button>
+                  </form>
+                </div>
+              <% } %>
+            </div>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<script>
+function toggleSnippetContent(index) {
+  var content = document.getElementById('content-' + index)
+  if (content.style.display === 'none') {
+    content.style.display = 'block'
+  } else {
+    content.style.display = 'none'
+  }
+}
+
+function confirmDelete() {
+  var confirmResponse = confirm("Are you sure you want to delete this snippet?")
+}
+</script>

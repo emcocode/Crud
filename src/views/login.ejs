@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Login page!
+  </title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main>
+      <h1>
+        Login page!
+      </h1>
+      <button onclick="window.location.href='/'" id="homeButton"></button><br>
+      <form class="formContainer" action="/dashboard" method="post">
+        <h3>Please enter username and password to log in or register.</h3><br>
+        <label>Enter username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label>Enter password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Log in">
+        <%- include('partials/messages') %>
+      </form>    
+    </main>
+</body>
+
+</html>

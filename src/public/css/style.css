@@ -1,0 +1,192 @@
+body {
+  /* background-color:olive; */
+  /* background-color:darkolivegreen; */
+  background-color:beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  background-color: lightblue;
+  height: auto;
+  border: 4px solid red;
+  border-radius: 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.formContainer {
+  background-color: lightcyan;
+  height: auto;
+  border: 4px solid red;
+  border-radius: 50px;
+  /* margin-top: 25px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+}
+
+#loginButton, #registerButton, #guestButton, #createSnippetButton, #dashHomeButton {
+  height: 40px;
+  background-color: forestgreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#loginButton, #guestButton {
+  width: 80px;
+}
+
+#registerButton {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100px;
+}
+
+input[type="button"]:active {
+  transform: scale(1);
+}
+
+#homeButton, #logoutButton, #dashboardButton {
+  position: absolute;
+  top: 30px;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  border-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+#homeButton {
+  left: 20px;
+  background-image: url('../img/home.png');
+}
+
+#logoutButton {
+  right: 20px;
+  background-image: url('../img/logout.png');
+}
+
+#dashboardButton {
+  left: 20px;
+  background-image: url('../img/home.png');
+}
+
+#loginButton:hover, #registerButton:hover, #guestButton:hover, #homeButton:hover, #logoutButton:hover, #dashboardButton:hover, #createSnippetButton:hover, #dashHomeButton:hover {
+  background-color: cornflowerblue;
+  transform: scale(1.1);
+}
+
+.editButton, .deleteButton {
+  height: 30px;
+  text-align: center;
+  background-color: forestgreen;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buttons-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: start;
+  
+}
+
+input[type="text"], input[type="password"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background-color: forestgreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: cornflowerblue;
+  transform: scale(1.1);
+}
+
+input[type="submit"]:active {
+  transform: scale(1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.snippet-title {
+  cursor: pointer;
+  color: black;
+  text-align: left;
+}
+
+.snippet-title:hover {
+  text-decoration: underline;
+}
+
+pre {
+  background-color: white;
+  border: 5px solid green;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.snippet-creator {
+  font-size: 0.75em;
+  font-style: normal;
+}

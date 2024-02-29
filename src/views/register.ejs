@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Register page!
+  </title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main>
+      <h1>
+        Register page!
+      </h1>
+      <button onclick="window.location.href='/'" id="homeButton"></button><br>
+      <form class="formContainer" action="/login" method="post">
+        <h3>Please enter username and password to register.</h3><br>
+        <label>Enter username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label>Enter password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+        <%- include('partials/messages') %>
+      </form>    
+    </main>
+  
+</body>
+
+</html>

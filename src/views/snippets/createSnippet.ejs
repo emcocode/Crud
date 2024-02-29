@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create snippet!</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+      <h1>Create new snippet:<br><%= username %></h1>
+      <button onclick="window.location.href='/dashboard'" id="dashboardButton"></button><br>
+      <button onclick="window.location.href='/logout'" id="logoutButton"></button><br>
+      <form action="/createSnippet" method="POST">
+        <label>Name of the snippet:</label><br>
+        <input type="text" id="snippetName" name="snippetName"><br><br>
+        <label>Snippet:</label><br>
+        <textarea name="snippetContent" style="height: 500px; width: 500px; resize: none; font-size: 14px; padding: 8px;"></textarea><br>
+        <div class="buttonGroup">
+          <input type="submit" id="createSnippetButton" value="Create snippet">
+        </div>
+      </form>
+    </main>
+</body>
+</html>
