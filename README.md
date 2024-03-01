@@ -1,5 +1,7 @@
 # Crud application for code snippets
 
+<img src="./Crud_pic.png" alt="Crud_pic.png" style="height: 500px; width:800px;"/>
+
 This application is built on using mongoDB to store users and snippets.
 
 Firstly, make sure you have Git and npm properly installed. Start by cloning this repo. Once the repository is cloned, locate Git Bash (or similar) into the cloned folder. Enter "npm install" to install the npm package manager. This will also install all the dependencies necessary.
