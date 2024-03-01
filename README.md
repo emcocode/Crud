@@ -13,3 +13,6 @@ Using Docker and mongoDB is a prerequisite, so it is assumed that the DB is inst
 
 When the DB is running and accessible, please enter "npm start" into Git Bash (or similar).
 The application will the be available at: http://localhost:3000/
+
+Don´t forget to shut it down:
+- Run "docker-compose down"
